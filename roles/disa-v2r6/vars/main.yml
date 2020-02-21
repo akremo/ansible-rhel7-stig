@@ -1,0 +1,24 @@
+#### add a variable for each port you need to whitelist keep a consistent naming scheme 
+#### to keep it simpler
+
+#### RHEL-07-030300 sets the address for the offload server for syslog 
+audit_aggregation_server: x.x.x.x
+
+#### RHEL-07-030330 
+
+#### for RHEL-07-040100 whitelisting and allow specific ports that have been approved  
+#### edit RHEL-07-040100 to inlcude all the variable you add for firewall ports
+firewall_whitelist_port_1: port number
+
+#### RHEL-07-040500 used to determine how time will be synced and what service to use.
+#### ensures a server is set. This selects the process and the playbook will do the rest
+#### select chrony or ntp
+time_sync_service: chrony/ntp
+
+
+
+#### RHEL-07-040600 specifying the dns servers
+#### if you have more than 2 add more and adjust the task for RHEL-07-040600
+dns_server_ip_1: x.x.x.x
+dns_server_ip_2: x.x.x.x
+
